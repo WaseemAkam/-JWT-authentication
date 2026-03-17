@@ -10,5 +10,7 @@ app.use(express.json());
 
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/account', require('./routes/accountRoutes'));
-
+app.get('/', (req, res) => {
+  res.send('JWT Banking API is running 🚀');
+});
 app.listen(5000, () => console.log('Server running'));
